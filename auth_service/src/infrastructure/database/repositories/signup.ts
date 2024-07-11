@@ -5,8 +5,6 @@ export const signup = async (
     data: UserEntity
 ) : Promise<UserEntity | null > => {
     try {
-        console.log(data,"222222222");
-        
         const newUser = await User.create(data)
         console.log(newUser,"user created")
         

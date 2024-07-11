@@ -15,7 +15,6 @@ const addToCartController = (dependencies) => {
     return (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
         try {
             const data = req.body;
-            console.log("🚀 ~ file: addToCart.ts:11 ~ returnasync ~ data:", data);
             const user = yield addToCartUseCase(dependencies).execute(data);
             res.status(200).json({
                 success: true,

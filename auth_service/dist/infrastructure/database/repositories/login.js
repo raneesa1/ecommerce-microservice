@@ -17,9 +17,9 @@ const loginCredential_1 = require("../../database/model/loginCredential");
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const login = (data) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        console.log(data);
+        // console.log(data);
         const user = yield loginCredential_1.User.findOne({ email: data.email });
-        console.log(user, 'new user,repo,signup');
+        // console.log(user, 'new user,repo,signup');
         if (user) {
             const isMatch = yield bcrypt_1.default.compare(data.password, user.password);
             if (!isMatch) {

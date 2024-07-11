@@ -15,19 +15,11 @@ const uri = process.env.MONGO_URL;
 exports.default = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
         yield mongoose.connect(uri);
-        console.log(`
-                           _   _      _    
-                          | | | |    | |   
-                          | |_| | ___| | __
-                          |  _  |/ _ \\ |/ /
-                          | | | |  __/   < 
-                          |_| |_|\\___|_|\\_\\
-       
-        🍃🍃🍃🍃🍃🍃 MongoDB connected successfully!🍃🍃🍃🍃🍃🍃
+        console.log(`MongoDB connected successfully!
         `);
     }
     catch (error) {
-        console.error('🍁🍁🍁🍁🍁 Database Connection failed 🍁🍁🍁🍁🍁');
+        console.error('Database Connection failed');
         console.error(error.message);
         process.exit(1);
     }

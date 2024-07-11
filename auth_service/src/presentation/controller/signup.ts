@@ -48,12 +48,12 @@ export const signupController = (dependencies: IDependencies) => {
         return;
       }
 
-      console.log("Searching for user with email:", credentials.email);
+      // console.log("Searching for user with email:", credentials.email);
       try {
         const existingUser = await findUserByEmailUseCase(dependencies).execute(
           credentials.email
         );
-        console.log("Existing user:", existingUser);
+        // console.log("Existing user:", existingUser);
         if (existingUser) {
           res
             .status(400)

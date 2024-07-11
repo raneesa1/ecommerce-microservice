@@ -9,7 +9,7 @@ export default async (data:{
     password: string;
 })=>{
     try {
-        console.log("🚀 ~ file: userCreatedConsumers.ts:17 ~ _id:", data)
+
        await insertUser(data)
     } catch (error:any) {
         throw new Error(error?.message)

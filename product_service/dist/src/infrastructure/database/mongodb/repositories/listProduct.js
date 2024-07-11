@@ -15,9 +15,7 @@ const verifyToken_1 = require("../../../../util/verifyToken");
 const listProduct = (token) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const decodedToken = yield (0, verifyToken_1.verifyToken)(token);
-        console.log("🚀 ~ file: listProduct.ts:8 ~ listProduct ~ decodedToken:", decodedToken);
         const Role = decodedToken === null || decodedToken === void 0 ? void 0 : decodedToken.role;
-        console.log("🚀 ~ file: listProduct.ts:11 ~ listProduct ~ Role:", Role);
         if (!Role) {
             throw new Error('Role not found in token payload');
         }

@@ -29,11 +29,8 @@ const runConsumer = () => __awaiter(void 0, void 0, void 0, function* () {
         yield _1.consumer.run({
             eachMessage: (_a) => __awaiter(void 0, [_a], void 0, function* ({ message }) {
                 const { key, value } = message;
-                console.log(key, '🚀🚀🚀🚀🚀🚀🚀', value);
                 const subscriberMethod = String(key);
-                console.log("🚀 ~ file: consumer.ts:25 ~ eachMessage: ~ subscriberMethod:", subscriberMethod);
                 const subscriberData = JSON.parse(String(value));
-                console.log("🚀 ~ file: consumer.ts:27 ~ eachMessage: ~ subscriberData:", subscriberData);
                 try {
                     yield subscriber[subscriberMethod](subscriberData);
                 }

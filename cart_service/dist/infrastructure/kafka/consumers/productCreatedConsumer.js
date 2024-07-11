@@ -12,7 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const addProduct_1 = require("../../mongodb/repositories/addProduct");
 exports.default = (data) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        console.log("🚀 ~ file: productCreatedConsumer.ts:11 ~ data:", data);
         yield (0, addProduct_1.insertProduct)(data);
     }
     catch (error) {

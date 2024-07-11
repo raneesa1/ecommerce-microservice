@@ -18,20 +18,10 @@ exports.default = () => __awaiter(void 0, void 0, void 0, function* () {
     console.log(process.env.MONGO_URI);
     try {
         yield mongoose_1.default.connect(String(process.env.MONGO_URI).trim());
-        console.log(`🍃🍃🍃🍃🍃🍃 Database connected with MongoDB 🍃🍃🍃🍃🍃🍃`);
-        console.log(`
-      _____    ______       ____     ______     __    __     ____   ________  
-      (  __ \  (   __ \     / __ \   (_  __ \    ) )  ( (    / ___) (___  ___) 
-       ) )_) )  ) (__) )   / /  \ \    ) ) \ \  ( (    ) )  / /         ) )    
-      (  ___/  (    __/   ( ()  () )  ( (   ) )  ) )  ( (  ( (         ( (     
-       ) )      ) \ \  _  ( ()  () )   ) )  ) ) ( (    ) ) ( (          ) )    
-      ( (      ( ( \ \_))  \ \__/ /   / /__/ /   ) \__/ (   \ \___     ( (     
-      /__\      )_) \__/    \____/   (______/    \______/    \____)    /__\    
-                                                                                                                                                    
-            `);
+        console.log(` Database connected with MongoDB `);
     }
     catch (error) {
-        console.error(`🍁🍁🍁🍁🍁 Database Connection failed 🍁🍁🍁🍁🍁`);
+        console.error(` Database Connection failed `);
         console.error(error.message);
         process.exit(1);
     }

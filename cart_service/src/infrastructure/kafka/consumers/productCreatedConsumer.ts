@@ -9,8 +9,7 @@ export default async (data:{
     stock:number;
 })=>{
     try {
-        console.log("🚀 ~ file: productCreatedConsumer.ts:11 ~ data:", data)
-      await insertProduct(data)
+    await insertProduct(data)
     } catch (error:any) {
         throw new Error(error?.message)
     }

@@ -12,7 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const user_1 = require("../../mongodb/repositories/user");
 exports.default = (data) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        console.log("🚀 ~ file: userCreatedConsumers.ts:17 ~ _id:", data);
         yield (0, user_1.insertUser)(data);
     }
     catch (error) {

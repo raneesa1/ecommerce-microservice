@@ -15,7 +15,6 @@ const getCart = (dependencies) => {
     return (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
         try {
             const userId = req.params.id;
-            console.log("🚀 ~ file: getCart.ts:11 ~ returnasync ~ userId:", userId);
             const cart = yield getCart(dependencies).execute(userId);
             res.status(200).json({ success: true, cart });
         }

@@ -13,7 +13,7 @@ exports.signup = void 0;
 const loginCredential_1 = require("../../database/model/loginCredential");
 const signup = (data) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        console.log(data, "222222222");
+
         const newUser = yield loginCredential_1.User.create(data);
         console.log(newUser, "user created");
         if (!newUser) {

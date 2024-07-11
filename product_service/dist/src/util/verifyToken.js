@@ -10,7 +10,6 @@ const verifyToken = (token) => {
     try {
         console.log("here");
         const decodedToken = jsonwebtoken_1.default.verify(token, secretKey);
-        console.log("🚀 ~ file: verifyToken.ts:8 ~ verifyToken ~ decodedToken:", decodedToken);
         return decodedToken;
     }
     catch (error) {

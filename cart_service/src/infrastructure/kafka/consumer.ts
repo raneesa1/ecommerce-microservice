@@ -21,11 +21,8 @@ export const runConsumer = async()=>{
         await consumer.run({
             eachMessage: async ({ message }) => {
                 const {key,value} = message;
-                console.log(key,'🚀🚀🚀🚀🚀🚀🚀',value);
                 const subscriberMethod = String(key)
-                console.log("🚀 ~ file: consumer.ts:25 ~ eachMessage: ~ subscriberMethod:", subscriberMethod)
                 const subscriberData = JSON.parse(String(value))
-                console.log("🚀 ~ file: consumer.ts:27 ~ eachMessage: ~ subscriberData:", subscriberData)
 
                 try{
                     await subscriber[subscriberMethod](subscriberData);
