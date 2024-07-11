@@ -11,5 +11,8 @@ export const addProduct = (dependencies: IDependencies) => {
 
   router.route("/products").get(listProduct)
 
+
+  
+
   return router;
 };
