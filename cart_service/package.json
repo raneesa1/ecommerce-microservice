@@ -1,0 +1,33 @@
+{
+  "name": "cart_service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "nodemon dist/index.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run build:watch\" \"npm run start\"",
+    "build:watch": "tsc --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cookie-parser": "^1.4.7",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^20.14.10",
+    "body-parser": "^1.20.2",
+    "concurrently": "^8.2.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "kafkajs": "^2.2.4",
+    "mongod": "^2.0.0",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}
