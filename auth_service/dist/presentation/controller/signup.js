@@ -109,6 +109,10 @@ const signupController = (dependencies) => {
         }
         catch (error) {
             next(error);
+
+
+
+            
         }
     });
 };

@@ -10,6 +10,9 @@ app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 
+
+
+
 app.use("/auth",proxy("http://localhost:8001/"));
 app.use('/product',proxy("http://localhost:8003/"));
 app.use('/cart',proxy("http://localhost:8004/"))
