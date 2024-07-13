@@ -16,6 +16,8 @@ export const loginController = (dependencies: IDependencies) => {
                 return;
             }
 
+            console.log('making changes')
+
             const user: UserEntity | null = await loginUserUseCase(dependencies).execute(userCredentials)
             
             if (user) {
